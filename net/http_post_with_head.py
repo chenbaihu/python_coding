@@ -19,7 +19,7 @@ def http_post_with_http_header(host, port, url, reqstr, header):
     conn.request("POST", url, reqstr, header)  
     response = conn.getresponse()
     res      = response.read()
-    print response.getheaders()		// http头
+    print response.getheaders()		# http头
     conn.close()
     return res
 
