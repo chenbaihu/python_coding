@@ -25,6 +25,12 @@ str = "123789"
 str = str[:3] + "456" + str[3:]
 print str
 
+#substr
+str = "123456789"
+print str[3:]
+print str[1:3]
+print str[:len(str1):2]
+
 #strcat
 str1 = "123456"
 str2 = "789"
