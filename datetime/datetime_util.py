@@ -32,6 +32,14 @@ print now_date.strftime("%Y-%m-%d")
 
 print datetime.datetime.now()
 
+d1 = datetime.datetime.now()
+d3 = d1 + datetime.timedelta(days =10)
+print str(d3)
+print "ctime=%s" % d3.strftime("%Y-%m-%d %02d:%02d:%02d")
+d4 = d1 + datetime.timedelta(seconds =100)
+print "ctime=%s" % d4.strftime("%Y-%m-%d %02d:%02d:%02d")
+
+
 #计算给定时间delta天后或delta天前的时间：
 base_time="20121012" #转换成2012-10-12
 delta=3              #计算3天后的日期，如果是delta=-3，计算3天前的日期
