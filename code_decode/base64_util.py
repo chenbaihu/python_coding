@@ -1,3 +1,4 @@
+#coding:utf-8
 #import base64
 #base64的8个方法（encode, decode, encodestring, decodestring, b64encode,b64decode, urlsafe_b64decode,urlsafe_b64encode）
 #encodestring 和 decodestring     用来编码和解码字符串
