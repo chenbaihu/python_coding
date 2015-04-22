@@ -73,4 +73,52 @@ fobj.truncate([size])       #把文件裁成规定的大小，默认的是裁到
                             #如果size比文件的大小还要大，依据系统的不同可能是不改变文件，也可能是用0把文件补到相应的大小，
                             #也可能是以一些随机的内容加上去。
 
+os.mkdir("file")            #创建目录
+
+shutil.copyfile("oldfile","newfile") #oldfile和newfile都只能是文件
+shutil.copy("oldfile","newfile")     #oldfile只能是文件夹，newfile可以是文件，也可以是目标目录
+shutil.copytree("olddir","newdir")   #olddir和newdir都只能是目录，且newdir必须不存在
+
+shutil.move("oldpos","newpos")       #移动文件（目录）
+
+os.rename("oldname","newname")       #文件或目录都是使用这条命令
+
+os.remove("file")                    #删除文件
+
+os.rmdir("dir")              #只能删除空目录
+shutil.rmtree("dir")         #空目录、有内容的目录都可以删
+
+os.chdir("path")             #转换目录
+
+os.getcwd()                  #函数得到当前工作目录，即当前Python脚本工作的目录路径。
+os.listdir(dirname)          #返回指定目录下的所有文件和目录名。
+
+os.path.split()              #函数返回一个路径的目录名和文件名。
+#例如：
+#os.path.split('/home/swaroop/byte/code/poem.txt')
+#('/home/swaroop/byte/code', 'poem.txt')
+os.path.splitext()           #分离文件名与扩展名 
+
+#函数分别检验给出的路径是一个文件还是目录
+os.path.isdir(name)          #判断name是不是一个目录，name不是目录就返回false 
+os.path.isfile(name)         #判断name是不是一个文件，不存在name也返回false 
+os.path.exists(name)         #判断是否存在文件或目录name 
+
+os.path.getsize(name)        #获得文件大小，如果name是目录返回0L 
+os.path.abspath(name)        #获得绝对路径 
+os.path.normpath(path)       #规范path字符串形式 
+os.path.join(path, name)     #连接目录与文件名或目录 
+os.path.basename(path)       #返回文件名 
+os.path.dirname(path)        #返回文件路径
+
+os.name                      #字符串指示你正在使用的平台。比如对于Windows，它是'nt'，而对于Linux/Unix用户，它是'posix'。
+os.linesep                   #字符串给出当前平台使用的行终止符。例如，Windows使用'\r\n'，Linux使用'\n'而Mac使用'\r'。
+os.system()                  #函数用来运行shell命令。
+os.getenv()                  #函数分别用来读取和设置环境变量。
+os.putenv()                 
+os.umask(mask)               #设置当前文件权限掩码，并返回上一个权限掩码。
+os.setsid()                  #使独立于终端的进程（不响应sigint，sighup等），使脱离终端。
+
+
+
 
